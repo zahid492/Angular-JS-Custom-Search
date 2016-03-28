@@ -1,0 +1,26 @@
+{
+  "name": "custome-search-filter",
+  "description": "search filter",
+  "main": "index.js",
+  "authors": [
+    "Zahidur Rahman"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "search"
+  ],
+  "moduleType": [],
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.3",
+    "bootstrap": "~3.3.6"
+  }
+}

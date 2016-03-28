@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="app">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../../favicon.ico">
+      <title>Custome Search Engine</title>
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <!-- Custom styles for this template -->
+      <link href="css/stylesheet.css" rel="stylesheet">
+   </head>
+   <body  ng-controller="SearchController">
+      <div class="form-group form-inline inputBox">
+         <input type="text" ng-model="search" placeholder="Search By Name or Role" class="form-control" id="text">
+      </div>
+      <ul class="list-group">
+         <li ng-repeat="data in datas | customeSearch:search" class="list-group-item">
+            <img ng-src="{{data.picture}}" />
+            <p><b>&nbsp;{{data.name}} </br> &nbsp;&nbsp; {{data.role}}</b>
+            <p>
+         </li>
+      </ul>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="scripts/app.js"></script>
+      <script src="scripts/searchcontroller.js"></script>
+      <script src="scripts/searchfilter.js"></script>
+   </body>
+</html>
